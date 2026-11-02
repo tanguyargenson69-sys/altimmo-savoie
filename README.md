@@ -34,6 +34,17 @@ une station avec moins de 20 ventes utilise le prix estimé `prix_estime`.
 .venv\Scripts\python.exe -m streamlit run app\app.py
 ```
 
+## Mise en ligne (Streamlit Community Cloud)
+
+1. Se connecter sur https://share.streamlit.io avec le compte GitHub.
+2. **Create app** → dépôt `tanguyargenson69-sys/altimmo-savoie`, branche `main`, fichier principal `app/app.py`.
+3. **Advanced settings** → Python 3.12 ou plus récent (requis par pandas 3).
+4. **Deploy**. Chaque `git push` sur `main` redéploie l'application.
+
+Le bouton **Mettre à jour les données** fonctionne en ligne, mais le serveur repart des fichiers du dépôt
+à chaque redémarrage. Pour rendre une mise à jour définitive : lancer l'import en local puis pousser
+les fichiers `data/` sur GitHub.
+
 ## Fichiers
 
 | Fichier | Contenu |
